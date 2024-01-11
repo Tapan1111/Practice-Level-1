@@ -10,8 +10,8 @@ public class NoFixedCols {
 				System.out.print(wrr[row][col]);
 			}
 			System.out.println();
-
 		}
+
 
 	}
 
