@@ -6,7 +6,7 @@ public class BcPatternProblems {
 		int n;
 
 //		printPattern1(5);
-//		printPattern2(9);
+//		printPattern2(9); 
 //		printPattern3(5);
 //		printpattern4(5);
 		printPatten09(5);

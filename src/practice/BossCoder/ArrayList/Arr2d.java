@@ -32,6 +32,7 @@ public class Arr2d {
 			}
 			marks[i] = arr;
 		}
+		sc.close();
 
 		int total;
 		int highestMarks = Integer.MIN_VALUE;

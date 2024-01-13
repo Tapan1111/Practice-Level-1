@@ -20,6 +20,7 @@ public class Arr2d1 {
 			System.out.println(i);
 			
 		}
+		sc.close();
 		
 
 		String[] list = new String[noOfSubject];
