@@ -26,5 +26,7 @@ public class StarPattern2 {
 			System.out.println();
 		}
 
+
+
 	}
 }
