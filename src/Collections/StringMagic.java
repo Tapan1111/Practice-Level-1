@@ -13,6 +13,7 @@ public class StringMagic {
 		StringBuilder reverseSentence = new StringBuilder();
 		for (String words : sentence.split(" ")) {
 			StringBuilder reverseword = new StringBuilder(words).reverse();
+			System.out.println(reverseword);
 			reverseSentence.append(reverseword).append(" ");
 		}
 
