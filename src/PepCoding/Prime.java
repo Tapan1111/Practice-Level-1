@@ -21,6 +21,7 @@ public class Prime {
 				n = n / i;
 				ans[index] = i;
 				index++;
+
 			}
 
 		}
