@@ -3,7 +3,7 @@ package ArraysFormDiffSources;
 public class CountPrime {
 	public static void main(String[] args) {
 		CountPrime prime = new CountPrime();
-		int n = 10;
+		int n = 100;
 		System.out.println(prime.solution(n));
 	}
 
