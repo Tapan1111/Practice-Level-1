@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class TakingInput {
 	public static void main(String[] args) {
+		TakingInput take = new TakingInput();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number of elements");
 		int n = sc.nextInt();
@@ -34,7 +35,19 @@ public class TakingInput {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
 		}
+		System.out.println(take.isSorted(array));
+	}
 
+	public boolean isSorted(int[] arr) {
+		int n = arr.length;
+		boolean check = true;
+		for (int i = 1; i <= n; i++) {
+			if (arr[i] < arr[i - 1]) {
+				check = false;
+				break;
+			}
+		}
+		return check;
 	}
 
 }
