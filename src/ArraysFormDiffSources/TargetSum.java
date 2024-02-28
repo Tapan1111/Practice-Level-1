@@ -6,8 +6,9 @@ public class TargetSum {
 		// int[] arr = { 4, 6, 3, 5, 8, 2 };
 		// int[] arr = { 1, 4, 5, 6, 3 };
 		int[] arr = { 1, 4, 5, 6, 3, 1, 4, 6, 3 };
+		// int[] arr = { -10, -10, -20, -3, -4, -5 };
 		int target = 12;
-		System.out.println(sum.findUnique(arr));
+		System.out.println(sum.secondMin(arr));
 	}
 
 	public int solution(int[] arr, int target) {
@@ -64,5 +65,57 @@ public class TargetSum {
 			unique = unique ^ arr[i];
 		}
 		return unique;
+	}
+
+	public int secondLargest(int[] arr) {
+		int firstmax = findMax(arr);
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == firstmax) {
+				arr[i] = Integer.MIN_VALUE;
+			}
+		}
+		int secMax = Integer.MIN_VALUE;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > secMax) {
+				secMax = arr[i];
+			}
+		}
+		return secMax;
+	}
+
+	public int secondMin(int[] arr) {
+		int firstMin = findMin(arr);
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == firstMin) {
+				arr[i] = Integer.MAX_VALUE;
+			}
+		}
+		int secMin = Integer.MAX_VALUE;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] < secMin) {
+				secMin = arr[i];
+			}
+		}
+		return secMin;
+	}
+
+	public int findMax(int[] arr) {
+		int max = Integer.MIN_VALUE;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > max) {
+				max = arr[i];
+			}
+		}
+		return max;
+	}
+
+	public int findMin(int[] arr) {
+		int min = Integer.MAX_VALUE;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] < min) {
+				min = arr[i];
+			}
+		}
+		return min;
 	}
 }
