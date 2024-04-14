@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PallindromePartitionin {
 	public static void main(String[] args) {
-		String s = "abaaba";
+		String s = "abaab";
 		System.out.println(pallindromePartitioning(s));
 		
 	}
