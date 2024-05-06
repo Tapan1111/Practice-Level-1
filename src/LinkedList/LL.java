@@ -142,6 +142,23 @@ public class LL {
 
 	}
 
+	// insert using recursion.
+	public void insertUsingRC(int val, int index) {
+		head = insertRec(val, index, head);
+
+	}
+
+	private Node insertRec(int val, int index, Node node) {
+		if (index == 0) {
+			Node temp = new Node(val, node);
+			size++;
+			return temp;
+		}
+		node.next = insertRec(val, index--, node.next);
+		return node;
+
+	}
+
 	private class Node {
 		private int value;
 		private Node next;
